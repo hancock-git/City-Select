@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+
+	<link type="text/css" rel="stylesheet" href="reset.css" />
+
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>	
+	<script type="text/javascript" src="js/layer/layer.min.js"></script>	
+
+	<script type="text/javascript" src="js/jobs_Area.js"></script>
+	<script type="text/javascript" src="js/city.selector.js"></script>
+
+	<style type='text/css'>
+
+		.place-con{ width: 495px; height: auto; padding:20px 40px; display: none;}
+
+		.result-list{ width: 100%; line-height: 35px;}
+		.select-comm span{ display: inline-block; height: 23px; padding-left: 8px; color:#333; line-height: 23px; border: 1px solid #f60; margin-right: 5px; cursor: pointer; word-break: break-all; 
+							word-wrap: break-word; border-radius: 3px;}
+		.select-comm span i,		
+		.select-comm span em{ display: inline-block; height: 23px; line-height: 20px; padding-right: 5px; margin-left: 2px; font-size: 16px; padding-left: 5px;}
+		
+		.select-comm span:hover{ border-color: #f60;}
+
+		.select-comm span:hover i,
+		.select-comm span:hover em{ background: #f60; color: #fff;}
+		.place-dl{ width: 495px; font-size: 14px; margin-top: 5px;}
+		.place-dt{ height: 35px; line-height: 35px; border-top: 1px solid #ccc;}
+		.place-dt span{ display: block; width: 50%; float: left; text-align: center;}
+		
+		.place-dd{ border: 1px solid #ccc; padding: 10px; background: #eee; clear: both; height: auto; overflow: hidden;}
+		.place-dd p{ height: 30px; line-height: 30px; padding-left: 20px; cursor: pointer;}
+		.place-dd p:hover{ background: #ccc;}
+		.place-dd p.hover{ background: #ddd url(images/right-icon.png) no-repeat 160px center;}		
+
+		.place-dd p input{ vertical-align: middle; margin-right: 5px; width: 20px; height: 20px;}
+		
+		#prov-area,
+		#city-area{ width: 210px; height: 240px; background: #fff; float: left; overflow-y: auto; }
+		#city-area{ width: 260px;}
+
+		#city-area label{ padding-left: 33px; cursor: pointer;}
+		#city-area dt p label{ padding-left: 10px;}
+
+		.place-btn{ width: 100%; height: 40px; line-height: 40px; text-align: center; margin-top: 20px;}
+		.place-btn span{ padding: 5px 10px; margin-right: 10px; color: #fff; font-size: 14px; cursor: pointer; border-radius: 5px; background: #666;}
+		.place-btn span:hover{ background: #333; }
+
+		.custom-city{ width: 100%; height: auto; overflow: hidden; clear: both;}
+		.custom-city dt{ width: 80px; line-heigh: 40px; float: left; line-height: 40px;}
+		.custom-city dd{ line-height: 40px;}
+		.custom-city dd label{ border-radius: 3px; background: #eee; display: inline-block; float: left; line-height: 20px; margin:8px 15px 0 0; padding: 2px 8px 1px 6px; cursor: pointer;}
+		.custom-city dd label input{ vertical-align: middle; width: 20px; height: 20px;}
+		.custom-city dd label.hover{ background: #f90; color: #fff;}
+
+		.select-area{ width: 495px; height: auto; overflow: hidden; }
+		.select-area dt{ width: 60px; float: left; line-height: 30px;}
+		.select-area dd{ float: left; width: 435px;}
+		
+		.selector-main{width: 300px; min-height: 30px; border: 1px solid #ccc; line-height: 30px; overflow: hidden; position: relative; border-right: 30px solie #fff;}
+		.selector-main dt{ line-height: 30px; float: left; width: 260px; padding: 5px;}
+		.selector-main dt span{ margin-right: 10px;}
+		.selector-main dd{ float: right; height: 100%; width: 30px; background: url(images/drop_arrow_p.png) no-repeat center center; text-indent: -9999px; cursor: pointer; position: absolute; right: 0;}
+		.selector-main dd:hover{ background:#f5f5f5 url(images/drop_arrow_p_hover.png) no-repeat center center;}
+		
+		
+	</style>
+
+</head>
+
+<body>
+
+	<dl class="selector-main">
+		<dt class="selector select-comm"></dt>
+		<dd class="sele-layer">更多</dd>
+	</dl>
+	
+	<div class="place-con">		
+		<dl class="select-area">
+			<dt>已选择：</dt>
+			<dd>
+				<div class="result-list select-comm"></div>
+			</dd>
+		</dl>
+		
+		
+		<dl class="custom-city">
+			<dt>自定义区域：</dt>
+			<dd class="custom-dd select-comm"></dd>
+		</dl>
+
+		<dl class="place-dl">
+			<dt class="place-dt">
+				<span>省份</span>
+				<span>市区</span>
+			</dt>
+			<dd class="place-dd">
+				<div id="prov-area"></div>
+				<div id="city-area"></div>
+			</dd>			
+		</dl>
+		<div class="place-btn">
+			<span class="place-submit">确定</span>
+			<span class="place-clear">清空</span>
+		</div>
+	</div>
+
+
+	
+
+</body>
+
+</html>
